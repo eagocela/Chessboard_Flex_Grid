@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body {
+  margin: 40px;
+  background-color: #151d3b;
+}
+#maincontainer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  background-color: #313552;
+  border-radius: 10px;
+  width: 70.69vmin;
+  height: 70.69vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px, rgba(0, 0, 0, 0.3) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 4px 8px, rgba(0, 0, 0, 0.3) 0px 8px 16px,
+    rgba(0, 0, 0, 0.3) 0px 16px 32px, rgba(0, 0, 0, 0.3) 0px 32px 64px;
+
+  animation: boarddown;
+  animation-duration: 3s;
+}
+
+@keyframes boarddown {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+.chessboard {
+  width: 59.92vmin;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 0.47vmin;
+  grid-template-columns: repeat(8, 7.49vmin);
+  grid-template-rows: repeat(8, 7.49vmin);
+  grid-auto-flow: row;
+
+  font-family: "FreeSerif";
+  src: url(FreeSerif-4aeK.ttf);
+  font-size: 6vmin;
+}
+
+.light {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 20% 60% 20%;
+  background-color: #b8405e;
+  color: #eee6ce;
+}
+
+.dark {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 20% 60% 20%;
+  background-color: #2eb086;
+  color: #eee6ce;
+}
+
+.pieces {
+  z-index: 4;
+  justify-self: center;
+  grid-column: 2;
+  animation: appear;
+  animation-duration: 2.5s;
+  animation-delay: 3.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.notation {
+  grid-column: 1;
+  grid-row: 1;
+  place-self: center;
+
+  /* padding-left: 1px; */
+  padding-top: 6px;
+  opacity: 30%;
+  font-size: 1.7vmin !important;
+  color: #fff;
+}
+
+.notation2 {
+  grid-column: 3;
+  grid-row: 3;
+  place-self: center;
+
+  padding-right: 3px;
+  padding-bottom: 6px;
+  opacity: 30%;
+  font-size: 2vmin !important;
+  color: #ffffff;
+}
+
+.pieces:hover {
+  cursor: grab;
+  text-shadow: 0px 0px 20px #ffd798;
+}
+
+.pieces:active {
+  cursor: grabbing;
+  text-shadow: 0px 0px 30px #000000;
+}

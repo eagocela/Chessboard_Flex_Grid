@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #580096;
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 4;
+
+  background-color: #ffffff;
+  padding: 20px 30px 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px #a12568;
+  color: #a12568;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+
+  animation: check;
+  animation-duration: 0.1s;
+  animation-delay: 17s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Main Container */
+
+#maincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a0944;
+  border-radius: 10px;
+  width: 90vmin;
+  height: 90vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px, rgba(0, 0, 0, 0.3) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 4px 8px, rgba(0, 0, 0, 0.3) 0px 8px 16px,
+    rgba(0, 0, 0, 0.3) 0px 16px 32px, rgba(0, 0, 0, 0.3) 0px 32px 64px;
+  animation: boarddown;
+  animation-duration: 3s;
+}
+
+@keyframes boarddown {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+/* Main Board */
+
+#column {
+  display: flex;
+  flex-direction: column;
+  width: 80vmin;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  font-family: "FreeSerif";
+  src: url(FreeSerif-4aeK.ttf);
+}
+
+.light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a12568;
+  width: 10vmin;
+  height: 10vmin;
+  font-size: 9vmin;
+  color: #fec260;
+}
+
+.dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b185f;
+  width: 10vmin;
+  height: 10vmin;
+  font-size: 9vmin;
+  color: #fec260;
+}
+
+.pieces {
+  opacity: 0;
+  animation: appear;
+  animation-duration: 2.5s;
+  animation-delay: 3.2s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pieces:hover {
+  text-shadow: 0px 0px 20px #ffd798;
+}
+
+.pieces:active {
+  text-shadow: 0px 0px 40px #00ffe6;
+}
+
+/* Piece Movements */
+
+.pieces #pawn1 {
+  animation: pawn1;
+  animation-duration: 1s;
+  animation-delay: 4.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pawn1 {
+  0% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  90% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  100% {
+    transform: translateY(-20vmin);
+  }
+}
+
+.pieces #pawn2 {
+  animation: pawn2;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pawn2 {
+  0% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  90% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  100% {
+    transform: translateY(10vmin);
+  }
+}
+
+.pieces #pawn3 {
+  animation: pawn3;
+  animation-duration: 1s;
+  animation-delay: 8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pawn3 {
+  0% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  90% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  100% {
+    transform: translateY(-10vmin);
+  }
+}
+
+.pieces #bishop {
+  animation: bishop;
+  animation-duration: 1s;
+  animation-delay: 10s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bishop {
+  0% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  90% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  100% {
+    transform: translateY(-20vmin) translateX(-20vmin);
+  }
+}
+
+.pieces #knight {
+  animation: knight;
+  animation-duration: 1s;
+  animation-delay: 12s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes knight {
+  0% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  90% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  100% {
+    transform: translateY(20vmin) translateX(10vmin);
+  }
+}
+
+.pieces #pawn4 {
+  animation: pawn4;
+  animation-duration: 1s;
+  animation-delay: 14s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pawn4 {
+  0% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  90% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  100% {
+    transform: translateY(-20vmin);
+  }
+}
+
+.pieces #queen {
+  animation: queen;
+  animation-duration: 1s;
+  animation-delay: 16s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes queen {
+  0% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  90% {
+    text-shadow: 0px 0px 30px #ffd798;
+  }
+  100% {
+    transform: translateY(40vmin) translateX(40vmin);
+  }
+}
+
+/* EXTRA */
+#pawn5 {
+  transition: transform 1s;
+}
+
+.pieces:active #pawn5 {
+  transform: translateY(20vmin);
+}
