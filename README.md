@@ -13,3 +13,5 @@
     - Extremely Vanilla JS to make the pieces move
 
 ![Screenshot](https://github.com/eagocela/Chessboard_Flex_Grid/blob/main/Grid/screenrecord.gif)
+
+![Screenshot](https://github.com/eagocela/Chessboard_Flex_Grid/blob/main/Grid/Screen%20Recording%202022-07-07%20at%202.53.30%20AM.gif)
