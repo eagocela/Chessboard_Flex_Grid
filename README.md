@@ -6,4 +6,4 @@
     - Basic HTML and CSS\
     - Experimented around on transitions and animation
 
-![Screenshot](https://github.com/eagocela/Chessboard_Flex_Grid/tree/main/Flex)
+![Screenshot](https://github.com/eagocela/Chessboard_Flex_Grid/blob/main/Flex/screenrecord.mp4)
